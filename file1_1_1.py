@@ -13,12 +13,12 @@
 from pythonFiles import file1_1_2
 # functions
 def ask_username():
-    global accepted_username
+    accepted_username = None
     while accepted_username is None:
         test_username = input("Please enter your username: ")
         if file1_1_2.check_username(test_username):
             accepted_username = test_username
-            ask_password()
+            return accepted_username
 
 def ask_password():
     accepted_password = None
@@ -28,8 +28,7 @@ it must have a capital and lowercase letter,
 and be at least 5 in length: """)
         if file1_1_2.check_password(test_password):
             accepted_password = test_password
-            print("username = {}, password = {}".format(accepted_username, accepted_password))
-            break
+            return accepted_password
         else:
             print("there was an error in your password, please try again")
 
@@ -38,5 +37,4 @@ and be at least 5 in length: """)
 # main
 
 if __name__ == "__main__":
-    accepted_username = None
     ask_username()

@@ -8,9 +8,6 @@
 
 # libraries
 
-
-# libraries
-
 # functions
 
 def explain_game():
@@ -22,7 +19,7 @@ def explain_game():
     which you will be able to use in future encounters, as you progress on you
     will fight stronger and stronger enemy's which will drop stronger attacks for you to use.
     """)
-# main
 
+# main
 if __name__ == "__main__":
     explain_game()

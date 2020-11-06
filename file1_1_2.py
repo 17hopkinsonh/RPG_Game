@@ -23,6 +23,7 @@ def check_username(username):
         print("your username needs to only contain letters and numbers, and be at least 3 characters")
 def ask_if_name_good(username):
     player_input = input("Is the username {} ok? (Y/N) ".format(username))
+    player_input = player_input.lower()
     if (player_input == "y") or (player_input == "yes"):
         return True
     else:
@@ -33,6 +34,5 @@ def check_password(password):
     else:
         return False
 # main
-
 if __name__ == "__main__":
-    print("")
+    print(ask_if_name_good("Bob"))
