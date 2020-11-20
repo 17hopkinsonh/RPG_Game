@@ -1,13 +1,13 @@
 """
     Author: Hayden Hopkinson
     Date: 18/09/2020
-    Description:
+    Description: this file will check the provided username and password to see if they meet the requirements
     version: 1.
     improvements from last version:
 """
 
 # libraries
-import string # the string library will let me use lists with each type of character
+import string # the string library will let me use lists with each type of character without having to make them myself
 # functions
 def check_username(username):
     accepted_characters = []

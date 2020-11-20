@@ -7,20 +7,20 @@
 """
 
 # libraries
-from pythonFiles import file2_1
+from pythonFiles import file2_1ver2
 
 # functions
 
-def routine(player_position, game_map = file2_1.create_map()):
+def routine(player_position, game_map = file2_1ver2.create_map()):
     sight(player_position, game_map)
     return ask_movement(player_position, game_map)
 
 
 def sight(player_position, game_map):
-    print("to the [n]orth you see " + file2_1.tile_descriptions()[game_map[player_position[1] - 1][player_position[0]]])
-    print("to the [e]ast you see " + file2_1.tile_descriptions()[game_map[player_position[1]][player_position[0] + 1]])
-    print("to the [s]outh you see " + file2_1.tile_descriptions()[game_map[player_position[1] + 1][player_position[0]]])
-    print("to the [w]est you see " + file2_1.tile_descriptions()[game_map[player_position[1]][player_position[0] - 1]])
+    print("to the [n]orth you see " + file2_1ver2.tile_descriptions()[game_map[player_position[1] - 1][player_position[0]]])
+    print("to the [e]ast you see " + file2_1ver2.tile_descriptions()[game_map[player_position[1]][player_position[0] + 1]])
+    print("to the [s]outh you see " + file2_1ver2.tile_descriptions()[game_map[player_position[1] + 1][player_position[0]]])
+    print("to the [w]est you see " + file2_1ver2.tile_descriptions()[game_map[player_position[1]][player_position[0] - 1]])
 
 def ask_movement(player_position, game_map):
     print("what direction would you like to move?")
@@ -44,7 +44,6 @@ def movement(player_position, x, y, game_map):
     if game_map[player_position[1] - x][player_position[0] - y] == 0:
         print("you cant move there")
     else:
-        print(player_position[1] - x, player_position[0] - y)
         return [player_position[0] - y, player_position[1] - x]
 
 # this is extreamly buggy, and so i chose to remake it in the two components above

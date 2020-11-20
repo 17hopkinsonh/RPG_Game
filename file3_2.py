@@ -9,14 +9,14 @@
 
 # libraries
 import random
-from pythonFiles import file2_1
+from pythonFiles import file2_1ver2
 
 # functions
 
 def random_encounter(tile_difficulty):
     random_chance = random.randint(0,10)
-    list_of_enemies = list(file2_1.set_monsters()[tile_difficulty].keys())
-    if len(file2_1.set_monsters()[tile_difficulty]) > random_chance:
+    list_of_enemies = list(file2_1ver2.set_monsters()[tile_difficulty].keys())
+    if len(file2_1ver2.set_monsters()[tile_difficulty]) > random_chance:
         print("you are fighting the " + str(list_of_enemies[random_chance]))
         return str(list_of_enemies[random_chance])
 

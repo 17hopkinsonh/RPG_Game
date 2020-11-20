@@ -1,10 +1,10 @@
 """
     Author: Hayden Hopkinson
-    Date: 15/10/2020
+    Date: 21/11/2020
     Description: this file will make a map of the game with difficulties for each tile, it also has a dictionary of
     the enemies stats
     version: 1.
-    improvements from last version:
+    improvements from last version: changed the enemies stas to be more balanced
 """
 
 # libraries
@@ -18,7 +18,8 @@ def tile_descriptions():
         "you can see that there is a beach there.",
         "there's desert in that direction.",
         "the desert in that direction seems to be extreamly dry.",
-        "the deserts gotten so dry theat there's a fire, its still traversable, but be carefull if you run into any monsters."
+        """the deserts gotten so dry theat there's a fire, its still traversable,
+        but be carefull if you run into any monsters."""
     ]
     return descriptions
 def create_map():
@@ -57,29 +58,29 @@ def set_monsters():
             "null": (0, 0)
         },
         {
-            "slime":     (15, 2 , 5 , 1 , 1 , 10),
-            "frog":      (10, 1 , 4 , 1 , 0 , 3 ),
-            "small bat": (5 , 4 , 10, 2 , 0 , 5 ),
-            "bird":      (12, 1 , 4 , 2 , 1 , 4 )
+            "slime":     (15, 2 , 5 , 3 , 1 , 10),
+            "frog":      (10, 1 , 4 , 2 , 0 , 3 ),
+            "small bat": (5 , 3 , 8 , 5 , 0 , 5 ),
+            "bird":      (12, 1 , 4 , 3 , 1 , 4 )
         },
         {
-            "large spider":   (30, 5 , 10, 3 , 10, 15),
-            "fish with legs": (25, 10, 20, 1 , 5 , 10),
-            "seagull":        (20, 1 , 5 , 1 , 15, 25)
+            "large spider":   (30, 5, 8, 6, 10, 15),
+            "fish with legs": (25, 6, 9, 5, 5 , 10),
+            "seagull":        (20, 1, 5, 4, 15, 25)
         },
         {
-            "skeleton":   (50, 10, 25, 5 , 20, 35),
-            "zombie":     (40, 15, 20, 2 , 20, 30),
-            "large bat":  (30, 20, 25, 1 , 30, 35),
-            "giant worm": (60, 20, 30, 3 , 10, 50)
+            "skeleton":   (50, 10, 20, 7 , 20, 35),
+            "zombie":     (40, 12, 18, 8 , 20, 30),
+            "large bat":  (30, 20, 25, 9 , 30, 35),
+            "giant worm": (60, 20, 30, 15, 10, 50)
         },
         {
-            "giant rat": (75 , 40, 45, 7 , 50, 75),
-            "tiger":     (100, 50, 50, 10, 70, 80)
+            "giant rat": (75 , 40, 45, 20 , 50, 75),
+            "tiger":     (100, 35, 45, 22, 70, 80)
         },
         {
-            "mimic":  (150, 60, 65 , 20, 150, 250 ),
-            "dragon": (250, 30, 150, 30, 400, 1000)
+            "mimic":  (150, 60, 65, 25, 150, 250 ),
+            "dragon": (250, 30, 75, 30, 400, 1000)
         },
     ]
     # this is a list with 5 dictionaries, each representing a different difficulty of enemies,
